@@ -1,0 +1,25 @@
+.social {
+    @include flex(center, space-between);
+    width: 220px;
+
+    &__item {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #2f3239;
+        cursor: pointer;
+        @include flex(center, center);
+        transition: all 0.5s ease-in-out;
+
+        svg {
+            fill: $txt-white-color;
+        }
+
+        &:hover {
+            background-color: #fff;
+        }
+        &:hover svg {
+            fill: $main-color;
+        }
+    }
+}

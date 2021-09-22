@@ -1,0 +1,177 @@
+.footer {
+    background-color: $main-color;
+    padding-top: 10rem;
+    // padding-left: -2rem;
+    // padding-right: -2rem;
+    @include tablet {
+        padding-top: 8rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    @include mobile {
+        padding-top: 6rem;
+    }
+
+    &__top {
+        &__item {
+            @include tablet {
+                margin-bottom: 3rem;
+            }
+            &__title {
+                display: inline-block;
+                font-size: 16px;
+                color: $txt-white-color;
+                text-transform: uppercase;
+                padding-bottom: 20px;
+                margin-bottom: 23px;
+                position: relative;
+                font-weight: 700;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 5rem;
+                    height: 2px;
+                    background-color: $second-color;
+                }
+            }
+
+            &__list {
+                color: $txt-second-color;
+
+                li ~ li {
+                    margin-top: 8px;
+                    line-height: 1.75;
+                }
+                li {
+                    a {
+                        cursor: pointer;
+                        transition: 0.5s ease;
+                        display: inline-block;
+                        &:hover {
+                            color: $txt-white-color;
+                            transform: translateX(1rem);
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                color: $txt-main-color;
+                line-height: 1.75;
+            }
+        }
+    }
+
+    &__center {
+        @include flex();
+        padding: 6rem 0;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        &__item {
+            &:first-child {
+                width: calc(3 * 100% / 12);
+
+                @include tablet {
+                    width: calc(6 * 100% / 12);
+                }
+                @include mobile {
+                    width: calc(100%);
+                }
+            }
+            &:last-child {
+                width: calc(7 * 100% / 12);
+                @include tablet {
+                    width: calc(6 * 100% / 12);
+                }
+                @include mobile {
+                    width: calc(100%);
+                    margin-top: 3rem;
+                }
+            }
+            &__title {
+                color: $txt-white-color;
+                text-transform: uppercase;
+                margin-bottom: 27px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            &__content {
+                form {
+                    position: relative;
+                    input {
+                        padding: 10px 145px 10px 20px;
+                        border: 2px solid $txt-second-color;
+                        border-radius: 5px;
+                        background-color: transparent;
+                        color: rgba(255, 255, 255, 0.5);
+                        width: 100%;
+                        font-size: 14px;
+                        display: block;
+                        outline: none;
+                        width: 100%;
+                        transition: 0.5s ease;
+
+                        &:focus {
+                            border-color: $second-color;
+                        }
+                    }
+                    button {
+                        text-transform: uppercase;
+                        display: inline-block;
+                        text-align: center;
+                        border: 0;
+                        background-color: $second-color;
+                        color: $txt-white-color;
+                        width: auto;
+                        cursor: pointer;
+                        outline: none;
+                        height: 100%;
+                        padding: 1px 2rem;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        font-weight: 600;
+                        letter-spacing: 0.5px;
+                        transition: 0.5s ease;
+
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+
+                        &:hover {
+                            background-color: $txt-white-color;
+                            color: $second-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        @include flex(center, space-between);
+        padding-bottom: 4rem;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        &__item {
+            &__copyright {
+                color: $txt-main-color;
+                text-transform: uppercase;
+                a {
+                    color: $txt-white-color;
+                }
+
+                @include mobile {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

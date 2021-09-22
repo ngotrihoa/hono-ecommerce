@@ -1,0 +1,18 @@
+.list-star {
+    &__item {
+        cursor: pointer;
+        input {
+            display: none;
+        }
+    }
+    &__item ~ &__item {
+        margin-left: 5px;
+    }
+}
+.list-star.disable {
+    .list-star {
+        &__item {
+            cursor: default;
+        }
+    }
+}

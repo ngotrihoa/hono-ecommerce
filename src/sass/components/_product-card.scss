@@ -1,0 +1,134 @@
+.product-card {
+    width: 100%;
+    // max-width: 330px;
+    transition: 0.5s ease;
+
+    @include tablet {
+        width: 100%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+    &__box {
+        position: relative;
+        padding-top: calc(100% + 4rem);
+        overflow: hidden;
+    }
+    &__image {
+        display: block;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            &:nth-child(1) {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: visible;
+                transition: 1s ease-in-out;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                visibility: none;
+                pointer-events: none;
+                transition: 1s ease-in-out;
+            }
+        }
+    }
+    &:hover img:nth-child(1) {
+        opacity: 0;
+        visibility: none;
+        pointer-events: none;
+    }
+    &:hover img:nth-child(2) {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: visible;
+    }
+
+    &__content {
+        margin: 2rem 0;
+        @include flex();
+
+        &__left {
+            flex-grow: 1;
+        }
+        &__right {
+            flex-shrink: 0;
+            align-self: flex-end;
+            line-height: 1.2;
+        }
+
+        &__name {
+            text-transform: uppercase;
+            font-size: 16px;
+            color: $main-color;
+            font-weight: 700;
+        }
+
+        &__review-star {
+            margin-top: 1rem;
+        }
+    }
+
+    &__action {
+        position: absolute;
+        bottom: 0;
+        padding: 2rem 2rem;
+        width: 100%;
+        background-color: $main-color;
+        @include flex(center, space-between);
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+
+        svg {
+            fill: $txt-white-color;
+        }
+
+        &__add {
+            color: $txt-white-color;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.5s ease;
+
+            &:hover {
+                color: $second-color;
+            }
+        }
+
+        &__right {
+            margin-left: auto;
+            &__item {
+                cursor: pointer;
+                svg {
+                    transition: 0.5s ease;
+                }
+            }
+            &__item:first-child {
+                display: inline-block;
+            }
+            &__item ~ &__item {
+                margin-left: 1.5rem;
+            }
+            &__item:hover > svg {
+                fill: $second-color;
+            }
+        }
+    }
+    &:hover &__action {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.product-card.gap {
+    .product-card ~ .product-card {
+        margin-left: 2rem;
+    }
+}

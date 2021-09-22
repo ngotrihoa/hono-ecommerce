@@ -1,0 +1,52 @@
+.section {
+    margin-top: 10rem;
+
+    @include tablet {
+        margin-top: 6rem;
+    }
+    &__container {
+        margin: 0 auto;
+        max-width: $section-container;
+
+        @include tablet {
+            max-width: 960px;
+        }
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+    & > * ~ *,
+    &__container > * ~ * {
+        margin-top: 4rem;
+    }
+    &__position {
+        position: relative;
+    }
+
+    &-title {
+        h3 {
+            font-size: 26px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 7px;
+            color: $main-color;
+        }
+        p {
+            color: $txt-main-color;
+        }
+    }
+}
+
+.section.section-padding {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    @include tablet {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    @include tablet {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

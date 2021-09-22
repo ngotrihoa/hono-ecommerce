@@ -1,0 +1,39 @@
+.slick-slide > div {
+    margin: 0 2rem;
+}
+.slick-list {
+    margin: 0 -2rem;
+}
+
+.slick-arrow {
+    z-index: 10;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #fafafa;
+    @include flex(center, center);
+    transition: 0.5s ease-in-out;
+    border: 2px solid #fafafa;
+
+    &::before,
+    &::after {
+        content: "";
+    }
+}
+.slick-arrow:hover {
+    border-color: $main-color;
+}
+.slick-arrow.slick-prev {
+    left: -10rem;
+
+    @include tablet {
+        left: 0;
+    }
+}
+
+.slick-arrow.slick-next {
+    right: -10rem;
+    @include tablet {
+        right: 0;
+    }
+}

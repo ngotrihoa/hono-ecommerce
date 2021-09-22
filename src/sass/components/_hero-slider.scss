@@ -1,0 +1,161 @@
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - #{$header-height});
+    background-color: $main-bg;
+    @include tablet {
+        height: 670px;
+    }
+    @include mobile {
+        height: 600px;
+    }
+    &__item {
+        @include flex(center, space-between);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        padding: 0 20rem;
+        max-width: 1920px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 1.2s ease;
+
+        @include tablet {
+            padding: 0 10rem;
+        }
+        @include mobile {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+        }
+
+        &__image {
+            flex-flow: 1;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: 1.2s ease;
+
+            @include tablet {
+                img {
+                    height: 400px;
+                }
+            }
+            @include mobile {
+                img {
+                    height: 300px;
+                }
+            }
+        }
+        &__content {
+            max-width: 50rem;
+            color: $main-color;
+            overflow: hidden;
+        }
+
+        &__subtitle {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+
+            transform: translateY(400%);
+            opacity: 0;
+            transition: 0.5s ease 0.5s;
+
+            @include mobile {
+                font-size: 1.4rem;
+            }
+        }
+        &__title {
+            font-size: 6.3rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+
+            transform: translateY(300%);
+
+            transition: 0.5s ease 1s;
+
+            @include mobile {
+                font-size: 3rem;
+            }
+        }
+        button {
+            margin-top: 4rem;
+
+            transform: translateY(200%);
+            transition: 0.5s ease 1.2s !important;
+            @include mobile {
+                margin-top: 2rem;
+            }
+        }
+    }
+    &__item.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: visible;
+    }
+    &__item.active > &__item__image {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: visible;
+    }
+    &__item.active &__item__subtitle,
+    &__item.active &__item__title,
+    &__item.active button {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &__control {
+        position: absolute;
+        left: 50%;
+        bottom: 5rem;
+        transform: translateX(-50%);
+
+        &__dots {
+            @include flex(center);
+
+            &__item {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background-color: #fff;
+                cursor: pointer;
+            }
+            &__item ~ &__item {
+                margin-left: 5px;
+            }
+
+            &__item.active {
+                background-color: $second-color;
+            }
+        }
+    }
+
+    &__arrow {
+        @include flex(center, space-between);
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &__item {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background-color: rgba(242, 232, 231, 0.5);
+            @include flex(center, center);
+            margin: 0 2rem;
+            cursor: pointer;
+
+            @include mobile {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

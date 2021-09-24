@@ -12,7 +12,7 @@ export function SectionTitle(props) {
 }
 export function SectionBody(props) {
   return (
-    <div className={`section-body ${props.className ? props.className : ''}`}>
+    <div className={`section-body ${props?.className ? props.className : ''}`}>
       {props.children}
     </div>
   );

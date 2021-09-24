@@ -112,7 +112,7 @@ function Home(props) {
           backgroundColor: '#f6f6f6',
         }}
       >
-        <Section className="section-padding">
+        <Section className="section__padding">
           <div className="section__container">
             <SectionTitle>
               <h3>BEST SELLERS</h3>
@@ -151,7 +151,7 @@ function Home(props) {
       {/* Banner category */}
 
       {/* info section */}
-      <Section className="section-padding">
+      <Section className="section__padding">
         <div className="section__container">
           <SectionBody className="section__position">
             <Grid col="6" smCol="1">

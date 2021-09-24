@@ -11,7 +11,7 @@ function Footer(props) {
   };
   return (
     <Section>
-      <SectionBody className="section__padding">
+      <SectionBody>
         <footer className="footer">
           <div className="section__container">
             <div className="footer__top">

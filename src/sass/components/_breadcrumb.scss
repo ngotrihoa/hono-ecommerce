@@ -1,0 +1,62 @@
+.breadcrumb {
+    background-color: $main-bg;
+    padding: 12rem 0;
+
+    @include tablet {
+        padding: 9rem 0;
+    }
+    @include mobile {
+        padding: 6rem 0;
+    }
+
+    &__content {
+        text-align: center;
+
+        &__title {
+            font-size: 42px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: $main-color;
+            margin-bottom: 12px;
+
+            @include tablet {
+                font-size: 34px;
+            }
+            @include mobile {
+                font-size: 30px;
+            }
+        }
+
+        &__link {
+            @include flex(center, center);
+
+            li {
+                transition: 0.3s ease;
+
+                &:hover {
+                    color: $second-color;
+                }
+
+                &:last-child {
+                    color: $txt-main-color;
+                    cursor: text;
+                    a {
+                        pointer-events: none;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                    position: relative;
+
+                    &::after {
+                        content: ">";
+                        position: absolute;
+                        left: calc(100% + 15px);
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

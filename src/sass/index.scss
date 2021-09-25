@@ -3,8 +3,14 @@
 @import "./mixins";
 @import "./base";
 
-@import "./components/header";
+//share
 @import "./components/section";
+@import "./components/star";
+@import "./components/slider";
+@import "./components/breadcrumb";
+
+// home
+@import "./components/header";
 @import "./components/modal";
 @import "./components/right-bar";
 @import "./components/social-link";
@@ -13,6 +19,6 @@
 @import "./components/service";
 @import "./components/banner";
 @import "./components/product-card";
-@import "./components/star";
-@import "./components/slider";
 @import "./components/footer";
+
+//catalog

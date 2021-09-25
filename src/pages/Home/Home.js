@@ -10,6 +10,7 @@ import infoImages from '../../assets/fake-data/infoImages';
 import productsData from '../../assets/fake-data/products';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Grid from '../../components/Shared/Grid';
+import Helmet from '../../components/Shared/Helmet/Helmet';
 import Section, {
   SectionBody,
   SectionTitle,
@@ -65,7 +66,7 @@ function Home(props) {
     ],
   };
   return (
-    <>
+    <Helmet title="HONO - Home">
       <HeroSlider />
       <div className="container">
         <Service />
@@ -173,7 +174,7 @@ function Home(props) {
         </div>
       </Section>
       {/* end info section */}
-    </>
+    </Helmet>
   );
 }
 

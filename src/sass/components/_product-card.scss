@@ -28,13 +28,13 @@
                 opacity: 1;
                 visibility: visible;
                 pointer-events: visible;
-                transition: 1s ease-in-out;
+                transition: 0.6s ease-in-out;
             }
             &:nth-child(2) {
                 opacity: 0;
                 visibility: none;
                 pointer-events: none;
-                transition: 1s ease-in-out;
+                transition: 0.6s ease-in-out;
             }
         }
     }
@@ -67,10 +67,20 @@
             font-size: 16px;
             color: $main-color;
             font-weight: 700;
+            cursor: pointer;
         }
 
         &__review-star {
             margin-top: 1rem;
+        }
+
+        &__description {
+            display: none;
+            line-height: 1.7;
+            color: $txt-main-color;
+        }
+        &__action {
+            display: none;
         }
     }
 
@@ -127,6 +137,92 @@
         visibility: visible;
     }
 }
+
+.product-card.list {
+    @include flex(flex-start, stretch);
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .product-card__box {
+        padding-top: 35%;
+        width: 30%;
+        flex-shrink: 0;
+        img {
+            object-fit: cover;
+        }
+        @include tablet {
+            padding-top: 40%;
+            width: 35%;
+        }
+
+        @include mobile {
+            padding-top: 100%;
+            width: 100%;
+        }
+    }
+    .product-card__content {
+        flex: 1;
+        flex-direction: column;
+        margin-left: 3rem;
+
+        @include mobile {
+            margin-left: 0;
+        }
+
+        &__right {
+            align-self: auto;
+            font-size: 20px;
+            margin-top: 8px;
+            margin-bottom: 13px;
+        }
+
+        &__name {
+            font-size: 20px;
+        }
+
+        &__description {
+            display: inline-block;
+        }
+        &__action {
+            display: block;
+            margin-top: 1.5rem;
+            a {
+                margin-top: 5px;
+                margin-right: 5px;
+                display: inline-block;
+                text-align: center;
+                background-color: $main-color;
+                color: $txt-white-color;
+                font-weight: 700;
+                border-radius: 5px;
+                padding: 18px 35px;
+                width: auto;
+                cursor: pointer;
+                outline: none;
+                text-transform: uppercase;
+
+                @include tablet {
+                    padding: 10px 25px;
+                }
+                svg {
+                    fill: $txt-white-color;
+                    transform: scale(1.2);
+                }
+
+                &:hover {
+                    background-color: $second-color;
+                }
+            }
+        }
+    }
+
+    .product-card__action {
+        display: none;
+    }
+}
+
 .product-card.gap {
     .product-card ~ .product-card {
         margin-left: 2rem;

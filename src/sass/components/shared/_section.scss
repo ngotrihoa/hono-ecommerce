@@ -36,17 +36,23 @@
             color: $txt-main-color;
         }
     }
-}
-
-.section.section__padding {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    @include tablet {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+    &.section__padding {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        @include tablet {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        @include mobile {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
     }
-    @include tablet {
-        padding-top: 0;
-        padding-bottom: 0;
+
+    &.section__margin__bottom {
+        margin-bottom: 10rem;
+        @include tablet {
+            margin-bottom: 6rem;
+        }
     }
 }

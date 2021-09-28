@@ -1,0 +1,46 @@
+.custom-checkbox {
+    @include flex(center);
+    cursor: pointer;
+    width: fit-content;
+    color: $txt-main-color;
+    text-transform: capitalize;
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+    input[type="checkbox"]:checked ~ &__checkmark {
+        background-color: $second-color;
+    }
+    input[type="checkbox"]:checked ~ &__checkmark::before {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__checkmark {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #dee2e6;
+        cursor: pointer;
+        position: relative;
+        margin-right: 1.5rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 5px;
+            height: 10px;
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: translate(-50%, -50%) rotate(45deg);
+            opacity: 0;
+            visibility: hidden;
+            transform-origin: center;
+        }
+    }
+}

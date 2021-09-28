@@ -152,7 +152,7 @@ function Home(props) {
       {/* Banner category */}
 
       {/* info section */}
-      <Section className="section__padding">
+      <Section className="section__margin__bottom">
         <div className="section__container">
           <SectionBody className="section__position">
             <Grid col="6" smCol="1">
@@ -164,7 +164,7 @@ function Home(props) {
             </Grid>
             <a
               href="https://www.facebook.com/trihoa.ngo/"
-              class="btn btn--hono"
+              className="btn btn--hono"
               target="_blank"
               rel="noreferrer"
             >

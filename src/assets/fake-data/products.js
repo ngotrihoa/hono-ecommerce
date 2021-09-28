@@ -18,82 +18,222 @@ const products = [
   {
     name: 'Cras neque metus',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 60,
+    oldPrice: 200,
+    slug: 'product1',
+    colors: ['black', 'white', 'pink'],
+    stars: 1,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Donec eu libero ac',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 80,
+    oldPrice: 200,
+    slug: 'product2',
+    colors: ['pink', 'yellow', 'blue'],
+    stars: 2,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Epicuri per lobortis',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 75,
+    oldPrice: 200,
+    slug: 'product3',
+    colors: ['black', 'yellow'],
+    stars: 3,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Kaoreet lobortis sagit',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 100,
+    oldPrice: 200,
+    slug: 'product4',
+    colors: ['black', 'blue'],
+    stars: 4,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Condimentum posuere',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 105,
+    oldPrice: 200,
+    slug: 'product5',
+    colors: ['pink', 'yellow'],
+    stars: 4,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Cras neque metus',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 120,
+    oldPrice: 200,
+    slug: 'product6',
+    colors: ['yellow', 'blue'],
+    stars: 5,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Donec eu libero ac',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 89,
+    oldPrice: 200,
+    slug: 'product7',
+    colors: ['blue'],
+    stars: 5,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Epicuri per lobortis',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 100,
+    oldPrice: 200,
+    slug: 'product8',
+    colors: ['black'],
+    stars: 2,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Kaoreet lobortis sagit',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 78,
+    oldPrice: 200,
+    slug: 'product9',
+    colors: ['black', 'yellow'],
+    stars: 2,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
   {
     name: 'Condimentum posuere',
     images: images.slice(randomNumber(0, 8), 9),
-    price: '60',
-    oldPrice: '60',
-    slug: 'product',
-    star: 4,
+    price: 60,
+    oldPrice: 200,
+    slug: 'product10',
+    colors: ['white'],
+    stars: 4,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Cras neque metus',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 60,
+    oldPrice: 200,
+    slug: 'product11',
+    colors: ['black', 'white', 'pink'],
+    stars: 1,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Donec eu libero ac',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 80,
+    oldPrice: 200,
+    slug: 'product12',
+    colors: ['pink', 'yellow', 'blue'],
+    stars: 2,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Epicuri per lobortis',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 75,
+    oldPrice: 200,
+    slug: 'product13',
+    colors: ['black', 'yellow'],
+    stars: 3,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Kaoreet lobortis sagit',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 100,
+    oldPrice: 200,
+    slug: 'product14',
+    colors: ['black', 'blue'],
+    stars: 4,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Condimentum posuere',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 105,
+    oldPrice: 200,
+    slug: 'product15',
+    colors: ['pink', 'yellow'],
+    stars: 4,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Cras neque metus',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 120,
+    oldPrice: 200,
+    slug: 'product16',
+    colors: ['yellow', 'blue'],
+    stars: 5,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Donec eu libero ac',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 89,
+    oldPrice: 200,
+    slug: 'product17',
+    colors: ['blue'],
+    stars: 5,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Epicuri per lobortis',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 100,
+    oldPrice: 200,
+    slug: 'product18',
+    colors: ['black'],
+    stars: 2,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Kaoreet lobortis sagit',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 78,
+    oldPrice: 200,
+    slug: 'product19',
+    colors: ['black', 'yellow'],
+    stars: 2,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
+  },
+  {
+    name: 'Condimentum posuere',
+    images: images.slice(randomNumber(0, 8), 9),
+    price: 60,
+    oldPrice: 200,
+    slug: 'product20',
+    colors: ['white'],
+    stars: 4,
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veniam voluptate accusamus exercitationem officia quam vel animi delectus praesentium molestias eaque est nobis dolorum, aspernatur adipisci iusto amet itaque. Aperiam!
+    Magnam eum reiciendis omnis exercitationem eaque ipsam totam, dicta beatae nisi. Ipsa voluptatibus, provident illum natus facilis maiores ipsam repellat accusamus quae vel illo dolore repellendus! Tempora quae asperiores soluta?`,
   },
 ];
 
@@ -102,8 +242,19 @@ const getProducts = (num) => {
   const start = randomNumber(0, products.length - num);
   return products.slice(start, start + num);
 };
+
+const maxPrice = products.reduce((cur, product) => {
+  return cur < product.price ? product.price : cur;
+}, 0);
+
+const minPrice = products.reduce((cur, product) => {
+  return product.price < cur ? product.price : cur;
+}, 9999999999);
+
 const productsData = {
   getAllProducts,
   getProducts,
+  maxPrice,
+  minPrice,
 };
 export default productsData;

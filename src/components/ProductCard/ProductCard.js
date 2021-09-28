@@ -4,9 +4,12 @@ import Star from '../Shared/Star/Star';
 import SVGIcon from '../Shared/SVGIcon/SVGIcon';
 
 function ProductCard(props) {
-  const { item } = props;
+  const { item, className } = props;
+  const addDots = (string, limit) => {
+    return string.substring(0, limit) + '...';
+  };
   return (
-    <div className="product-card">
+    <div className={`product-card ${className ? className : ''}`}>
       <div className="product-card__box">
         <Link to={`/catalog/${item.slug}`} className="product-card__image">
           <img src={item.images[0]} alt="" />
@@ -30,9 +33,14 @@ function ProductCard(props) {
       </div>
       <div className="product-card__content">
         <div className="product-card__content__left">
-          <div className="product-card__content__name">{item.name}</div>
+          <Link
+            to={`/catalog/${item.slug}`}
+            className="product-card__content__name"
+          >
+            {item.name}
+          </Link>
           <div className="product-card__content__review-star">
-            <Star stars={4} disable={true} size="small" />
+            <Star stars={item.stars} disable={true} size="small" />
           </div>
         </div>
         <div className="product-card__content__right">
@@ -43,6 +51,21 @@ function ProductCard(props) {
             </span>
           )}
           <span className="product-card__content__price">{`$${item.price}`}</span>
+        </div>
+        <p className="product-card__content__description">
+          {addDots(item.description, 200)}
+        </p>
+        <div className="product-card__content__action">
+          <Link to="#">Add to cart</Link>
+          <Link to="#">
+            <SVGIcon name="search" width="12px" />
+          </Link>
+          <Link to="/wishlist">
+            <SVGIcon name="wishlist" width="12px" />
+          </Link>
+          <Link to="/compare">
+            <SVGIcon name="compare" width="12px" />
+          </Link>
         </div>
       </div>
     </div>

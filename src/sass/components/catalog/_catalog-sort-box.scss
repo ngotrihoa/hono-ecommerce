@@ -1,0 +1,48 @@
+.sort-box {
+    @include flex(center, space-between);
+    margin-bottom: 3rem;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    &__display {
+        @include flex(center);
+
+        @include mobile {
+            margin-bottom: 2rem;
+        }
+        &__icon {
+            @include flex(center, center);
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            svg {
+                fill: $main-color;
+            }
+
+            &.active {
+                background-color: $second-color;
+                svg {
+                    fill: $txt-white-color;
+                }
+            }
+        }
+
+        &__result {
+            margin-left: 1rem;
+        }
+    }
+
+    &__select {
+        @include flex(center);
+        label {
+            margin-right: 1.5rem;
+        }
+    }
+}

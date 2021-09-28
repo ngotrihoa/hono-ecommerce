@@ -7,7 +7,7 @@
     margin: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    // user-select: none;
+    user-select: none;
 }
 
 html {
@@ -27,6 +27,7 @@ a {
 
 img {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .grid {
@@ -66,7 +67,7 @@ img {
     margin: 0 auto;
 
     @include tablet {
-        padding: 0 4rem;
+        padding: 0 3rem;
     }
     @include mobile {
         padding: 0 1.5rem;

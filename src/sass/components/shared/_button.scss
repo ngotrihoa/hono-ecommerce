@@ -1,0 +1,39 @@
+.button {
+    display: inline-block;
+    text-align: center;
+    border: 0;
+    background-color: $second-color;
+    color: $txt-white-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 6px 12px;
+    width: auto;
+    cursor: pointer;
+    outline: none;
+    line-height: 1.75;
+    transition: 0.3s ease;
+    border: 1px solid $second-color;
+
+    &:hover {
+        background-color: transparent;
+        color: $second-color;
+    }
+
+    &.large {
+        color: $main-color;
+        border: 1px solid $main-color;
+        padding: 15px 33px;
+        background-color: transparent;
+        transition: 0.3s ease;
+
+        @include tablet {
+            padding: 10px 25px;
+        }
+
+        &:hover {
+            color: $second-color;
+            border-color: $second-color;
+        }
+    }
+}

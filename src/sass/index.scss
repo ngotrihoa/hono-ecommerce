@@ -3,22 +3,30 @@
 @import "./mixins";
 @import "./base";
 
+@import "./components/header";
+@import "./components/footer";
+@import "./components/product-card";
+
 //share
-@import "./components/section";
-@import "./components/star";
-@import "./components/slider";
-@import "./components/breadcrumb";
+@import "./components/shared/section";
+@import "./components/shared/star";
+@import "./components/shared/slider";
+@import "./components/shared/breadcrumb";
+@import "./components/shared/modal";
+@import "./components/shared/button";
+@import "./components/shared/slider-range";
+@import "./components/shared/checkbox";
+@import "./components/shared/tag-link";
+@import "./components/shared/select";
 
 // home
-@import "./components/header";
-@import "./components/modal";
-@import "./components/right-bar";
-@import "./components/social-link";
-@import "./components/button";
-@import "./components/hero-slider";
-@import "./components/service";
-@import "./components/banner";
-@import "./components/product-card";
-@import "./components/footer";
+@import "./components/home/right-bar";
+@import "./components/home/social-link";
+@import "./components/home/hero-slider";
+@import "./components/home/service";
+@import "./components/home/banner";
 
 //catalog
+@import "./components/catalog/catalog.scss";
+@import "./components/catalog/side-bar.scss";
+@import "./components/catalog/catalog-sort-box";

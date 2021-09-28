@@ -15,6 +15,10 @@ import { ReactComponent as LeftLengthArrow } from '../../../assets/icons/left-le
 import { ReactComponent as Star } from '../../../assets/icons/star.svg';
 import { ReactComponent as StarChecked } from '../../../assets/icons/star-checked.svg';
 import { ReactComponent as Compare } from '../../../assets/icons/compare.svg';
+import { ReactComponent as List } from '../../../assets/icons/list.svg';
+import { ReactComponent as GridList } from '../../../assets/icons/grid-list.svg';
+import { ReactComponent as ChevronDown } from '../../../assets/icons/down-chevron.svg';
+import { ReactComponent as Next } from '../../../assets/icons/next.svg';
 
 const mapIcon = {
   wishlist: Wishlist,
@@ -33,6 +37,10 @@ const mapIcon = {
   star: Star,
   starChecked: StarChecked,
   compare: Compare,
+  list: List,
+  gridList: GridList,
+  chevronDown: ChevronDown,
+  next: Next,
 };
 
 function SVGIcon({ name, width = 21, height = width, ...rest }) {

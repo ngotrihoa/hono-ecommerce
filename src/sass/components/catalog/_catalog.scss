@@ -1,0 +1,136 @@
+.catalog {
+    @include flex(flex-start, stretch);
+
+    &__toggle {
+        position: absolute;
+        left: 0;
+        top: 54rem;
+        width: 3rem;
+        height: 4rem;
+        background-color: #ebebeb;
+        @include flex(center, center);
+        display: none;
+
+        svg {
+            fill: $main-color;
+        }
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+        }
+    }
+    .sidebar {
+        width: 25%;
+        flex: 0 0 auto;
+
+        &__close {
+            text-align: right;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            position: fixed;
+            padding: 0 1.5rem;
+            width: 50%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            transform: translateX(-100%);
+            z-index: 100;
+            background-color: #fff;
+            overflow-y: scroll;
+            transition: 0.3s ease;
+
+            &.active {
+                transform: translateX(0);
+
+                .sidebar__close {
+                    display: block;
+                }
+            }
+        }
+
+        @include mobile {
+            width: 75%;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        padding: 0 1.5rem;
+        &__container {
+            padding: 0 3rem;
+            @media screen and (max-width: 768px) {
+                padding: 0;
+            }
+        }
+
+        &__filter-tags {
+            @include flex(center);
+            margin-bottom: 3rem;
+            button {
+                flex-shrink: 0;
+            }
+            &__list {
+                margin-left: 2rem;
+                @include flex(center);
+                flex-wrap: wrap;
+
+                li {
+                    margin: 5px 0;
+                    margin-left: 1rem;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    border: 1px solid #ebebeb;
+                    color: $main-color;
+                    @include flex(center);
+
+                    span {
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
+                    svg {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &__pages {
+            margin-top: 4rem;
+            &__list {
+                @include flex(center, center);
+                li ~ li {
+                    margin-left: 1rem;
+                }
+                li {
+                    a {
+                        width: 4rem;
+                        height: 4rem;
+                        color: $main-color;
+                        border: 1px solid #d5d5d5;
+                        border-radius: 3px;
+                        display: inline-block;
+                        @include flex(center, center);
+                    }
+                    &:hover a {
+                        color: $txt-white-color;
+                        background-color: $second-color;
+                    }
+                    &:hover a > svg {
+                        fill: $txt-white-color;
+                    }
+                    &.active a {
+                        color: $txt-white-color;
+                        background-color: $second-color;
+                    }
+                    &.active a > svg {
+                        fill: $txt-white-color;
+                    }
+                }
+            }
+        }
+    }
+}

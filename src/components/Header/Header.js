@@ -8,19 +8,19 @@ function Header(props) {
 
   const headerRef = useRef(null);
   useEffect(() => {
-    if (headerRef && headerRef.current) {
-      window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
+      if (headerRef && headerRef.current) {
         if (
           document.body.scrollTop > 100 ||
           document.documentElement.scrollTop > 100
         ) {
           headerRef.current.classList.add('shirk');
         } else headerRef.current.classList.remove('shirk');
-      });
-      return () => {
-        window.removeEventListener('scroll');
-      };
-    }
+      }
+    });
+    return () => {
+      window.removeEventListener('scroll');
+    };
   }, []);
 
   const handleOpenRightBar = () => {

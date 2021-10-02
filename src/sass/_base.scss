@@ -56,6 +56,15 @@ img {
     }
 }
 
+@each $color, $val in $colors {
+    .color-#{$color} {
+        color: $val;
+    }
+    .bg-#{$color} {
+        background-color: $val;
+    }
+}
+
 .wrapper {
     overflow: hidden;
 }

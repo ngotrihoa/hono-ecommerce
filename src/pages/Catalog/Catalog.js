@@ -72,7 +72,7 @@ function Catalog(props) {
         ]}
       />
       <div className="container">
-        <Section className="section__container section__padding">
+        <Section className="section__container">
           <SectionBody className="catalog">
             {/* side bar */}
             <div className="catalog__toggle">

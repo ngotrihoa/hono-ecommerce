@@ -1,15 +1,16 @@
 .footer {
     background-color: $main-color;
     padding-top: 10rem;
-    // padding-left: -2rem;
-    // padding-right: -2rem;
+    margin-top: 10rem;
     @include tablet {
         padding-top: 8rem;
         padding-left: 2rem;
         padding-right: 2rem;
+        margin-top: 6rem;
     }
     @include mobile {
         padding-top: 6rem;
+        margin-top: 3rem;
     }
 
     &__top {

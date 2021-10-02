@@ -1,12 +1,15 @@
 .breadcrumb {
     background-color: $main-bg;
     padding: 12rem 0;
+    margin-bottom: 10rem;
 
     @include tablet {
         padding: 9rem 0;
+        margin-bottom: 6rem;
     }
     @include mobile {
         padding: 6rem 0;
+        margin-bottom: 3rem;
     }
 
     &__content {
@@ -17,7 +20,7 @@
             font-weight: 500;
             text-transform: uppercase;
             color: $main-color;
-            margin-bottom: 12px;
+            margin-bottom: 1.5rem;
 
             @include tablet {
                 font-size: 34px;
@@ -32,7 +35,7 @@
 
             li {
                 transition: 0.3s ease;
-
+                text-transform: capitalize;
                 &:hover {
                     color: $second-color;
                 }

@@ -1,0 +1,144 @@
+.added-success {
+    width: 87rem;
+    background-color: #fff;
+    padding: 2rem;
+
+    @media screen and (max-width: 768px) {
+        width: 670px;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+
+    .close-modal {
+        margin-left: auto;
+        width: 4rem;
+        height: 4rem;
+        @include flex(center, center);
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    &__content {
+        @include flex();
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+    &__left {
+        @include flex();
+        width: 60%;
+        border-right: 1px solid #dee2e6;
+
+        @include mobile {
+            border: unset;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__img {
+            height: 15rem;
+            width: auto;
+            flex-shrink: 0;
+            img {
+                height: 100%;
+            }
+            @include mobile {
+                width: 100%;
+                height: 30rem;
+            }
+        }
+
+        &__action {
+            flex: 1;
+            margin-left: 2rem;
+
+            @include mobile {
+                margin-left: 0;
+                margin-top: 3rem;
+                width: 100%;
+            }
+
+            color: $txt-main-color;
+            &__notify {
+                @include flex(center);
+                .icon {
+                    display: inline-block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background-color: $second-color;
+                    border-radius: 2px;
+                    margin-right: 1rem;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 40%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                        width: 6px;
+                        height: 9px;
+                        border-bottom: 2px solid #fff;
+                        border-right: 2px solid #fff;
+                    }
+                }
+            }
+
+            &__button {
+                margin-top: 2rem;
+                @include mobile {
+                    width: 100%;
+                    a {
+                        margin-bottom: 2rem;
+                        margin-right: 0;
+                    }
+                }
+                a {
+                    font-weight: 400;
+                    padding: 5px 10px;
+                    margin-right: 2rem;
+                    text-transform: capitalize;
+                    border-radius: unset;
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__right {
+        padding: 0 2rem;
+        color: $txt-main-color;
+        line-height: 1.75;
+        @include mobile {
+            padding: 0;
+        }
+
+        p {
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+
+            span {
+                font-weight: 300;
+                margin-left: 1rem;
+            }
+
+            &:nth-child(2) {
+                text-transform: uppercase;
+            }
+        }
+
+        a {
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: $second-color;
+        }
+    }
+}

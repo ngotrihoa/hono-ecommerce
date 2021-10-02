@@ -24,7 +24,7 @@ function Star(props) {
             <SVGIcon
               name={'star'}
               fill={ratingValue <= (hovering || rating) ? '#b19361' : '#E1E1E1'}
-              width={size === 'small' ? '15px' : '21px'}
+              width={size === 'small' ? '12px' : '15px'}
               onMouseEnter={() => disable || setHovering(ratingValue)}
               onMouseLeave={() => disable || setHovering(null)}
             />

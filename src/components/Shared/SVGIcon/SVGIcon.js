@@ -19,6 +19,7 @@ import { ReactComponent as List } from '../../../assets/icons/list.svg';
 import { ReactComponent as GridList } from '../../../assets/icons/grid-list.svg';
 import { ReactComponent as ChevronDown } from '../../../assets/icons/down-chevron.svg';
 import { ReactComponent as Next } from '../../../assets/icons/next.svg';
+import { ReactComponent as Trash } from '../../../assets/icons/trash.svg';
 
 const mapIcon = {
   wishlist: Wishlist,
@@ -41,6 +42,7 @@ const mapIcon = {
   gridList: GridList,
   chevronDown: ChevronDown,
   next: Next,
+  trash: Trash,
 };
 
 function SVGIcon({ name, width = 21, height = width, ...rest }) {

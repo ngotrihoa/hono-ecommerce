@@ -7,7 +7,7 @@ import SocialLink from '../SocialLink/SocialLink';
 
 function RightBar(props) {
   return (
-    <Modal onClose={props.onClose}>
+    <Modal onClose={props.onClose} position="right">
       <div className="right-bar">
         <div className="right-bar__close">
           <SVGIcon name="close" width="18px" onClick={props.onClose} />
@@ -15,22 +15,34 @@ function RightBar(props) {
         <div className="right-bar__nav">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={props.onClose}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/catalog">Catalog</Link>
+              <Link to="/catalog" onClick={props.onClose}>
+                Catalog
+              </Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog" onClick={props.onClose}>
+                Blog
+              </Link>
             </li>
             <li>
-              <Link to="/about">About us</Link>
+              <Link to="/about" onClick={props.onClose}>
+                About us
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact us</Link>
+              <Link to="/contact" onClick={props.onClose}>
+                Contact us
+              </Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/login" onClick={props.onClose}>
+                Login
+              </Link>
             </li>
           </ul>
         </div>

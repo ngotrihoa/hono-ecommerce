@@ -1,8 +1,18 @@
 .slick-slide > div {
     margin: 0 2rem;
+
+    @include mobile {
+        margin: 0;
+    }
 }
 .slick-list {
+    width: 100%;
     margin: 0 -2rem;
+
+    @include tablet {
+        width: auto;
+        margin: 0;
+    }
 }
 
 .slick-arrow {
@@ -32,8 +42,8 @@
 }
 
 .slick-arrow.slick-next {
-    right: -8.5rem;
+    right: -6.5rem;
     @include tablet {
-        right: 0;
+        right: 0rem;
     }
 }

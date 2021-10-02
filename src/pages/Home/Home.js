@@ -1,5 +1,4 @@
 import React from 'react';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import {
@@ -8,6 +7,7 @@ import {
 } from '../../assets/fake-data/banner-data';
 import infoImages from '../../assets/fake-data/infoImages';
 import productsData from '../../assets/fake-data/products';
+import MainSlider from '../../components/MainSlider/MainSlider';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Grid from '../../components/Shared/Grid';
 import Helmet from '../../components/Shared/Helmet/Helmet';
@@ -22,49 +22,6 @@ import HeroSlider from './HeroSlider';
 import Service from './Service';
 
 function Home(props) {
-  function Arrow(props) {
-    const { className, onClick, icon } = props;
-    return (
-      <div className={className} onClick={onClick}>
-        {icon}
-      </div>
-    );
-  }
-
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    nextArrow: (
-      <Arrow
-        className="slick-arrow"
-        icon={<SVGIcon name="rightLengthArrow" width="15px" height="24px" />}
-      />
-    ),
-    prevArrow: (
-      <Arrow
-        className="slick-arrow"
-        icon={<SVGIcon name="leftLengthArrow" width="15px" height="24px" />}
-      />
-    ),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
     <Helmet title="HONO - Home">
       <HeroSlider />
@@ -80,13 +37,13 @@ function Home(props) {
               <p>Preorder now to receive exclusive deals & gifts</p>
             </SectionTitle>
             <SectionBody>
-              <Slider {...settings}>
+              <MainSlider>
                 {productsData.getAllProducts().map((item, index) => (
                   <div key={index}>
                     <ProductCard item={item} />
                   </div>
                 ))}
-              </Slider>
+              </MainSlider>
             </SectionBody>
           </div>
         </Section>
@@ -120,13 +77,13 @@ function Home(props) {
               <p>Add our best sellers to your weekly lineup.</p>
             </SectionTitle>
             <SectionBody>
-              <Slider {...settings}>
+              <MainSlider>
                 {productsData.getAllProducts().map((item, index) => (
                   <div key={index}>
                     <ProductCard item={item} />
                   </div>
                 ))}
-              </Slider>
+              </MainSlider>
             </SectionBody>
           </div>
         </Section>
@@ -152,7 +109,7 @@ function Home(props) {
       {/* Banner category */}
 
       {/* info section */}
-      <Section className="section__margin__bottom">
+      <Section>
         <div className="section__container">
           <SectionBody className="section__position">
             <Grid col="6" smCol="1">

@@ -6,6 +6,8 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/product-card";
+@import "./components/tabs";
+@import "./components/added-success.scss";
 
 //share
 @import "./components/shared/section";
@@ -18,6 +20,7 @@
 @import "./components/shared/checkbox";
 @import "./components/shared/tag-link";
 @import "./components/shared/select";
+@import "./components/shared/input";
 
 // home
 @import "./components/home/right-bar";
@@ -30,3 +33,11 @@
 @import "./components/catalog/catalog.scss";
 @import "./components/catalog/side-bar.scss";
 @import "./components/catalog/catalog-sort-box";
+
+//product-detail
+@import "./components/product/product-detail";
+@import "./components/product/product-preview";
+
+//cart
+@import "./components/cart/cart";
+@import "./components/cart/cart-table";
